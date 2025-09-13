@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All-in-One Unit Converter</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Free online unit converter - length, weight, temperature, speed, currency, and more. Fast, accurate, and easy to use.">
+  <meta name="keywords" content="unit converter, length, weight, temperature, speed, currency, calculator, online tool">
+  <meta name="author" content="Your Name">
+
+  <!-- ✅ CSS File -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <h1>🌍 All-in-One Unit Converter</h1>
-    <p class="subtitle">Convert anything into anything – simple, fast, accurate!</p>
-    <nav class="top-nav">
-      <a href="index.html">Home</a>
+    <p>Convert anything into anything – simple, fast, accurate!</p>
+    <nav>
+      <a href="index.html">Home</a> |
       <a href="category.html">Categories</a>
     </nav>
   </header>
 
-  <main>
-    <section class="categories">
-      <a href="category.html?cat=common" class="card">Common Converters</a>
-      <a href="category.html?cat=engineering" class="card">Engineering</a>
-      <a href="category.html?cat=computer" class="card">Computer / Data</a>
-      <a href="category.html?cat=finance" class="card">Finance</a>
-      <a href="category.html?cat=misc" class="card">Miscellaneous</a>
-    </section>
+  <main class="converter-container">
+    <h2>Popular Categories</h2>
+    <div class="category-grid">
+      <a class="category-card" href="converter.html?type=length">📏 Length Converter</a>
+      <a class="category-card" href="converter.html?type=weight">⚖️ Weight Converter</a>
+      <a class="category-card" href="converter.html?type=temperature">🌡️ Temperature Converter</a>
+      <a class="category-card" href="converter.html?type=speed">🚀 Speed Converter</a>
+      <a class="category-card" href="converter.html?type=currency">💰 Currency Converter</a>
+      <a class="category-card" href="converter.html?type=data">💾 Data Converter</a>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 All-in-One Converter. Built for learning 🚀</p>
   </footer>
+
+  <!-- ✅ JS File -->
+  <script src="js/converters.js"></script>
 </body>
 </html>
