@@ -1,0 +1,153 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #0077cc;
+  color: #fff;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+header .subtitle {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.top-nav {
+  margin-top: 6px;
+  display: flex;
+  gap: 12px;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Main grid */
+.categories, .converter-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 1.4rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+}
+
+/* Converter card */
+.converter-card {
+  background: white;
+  padding: 1.6rem;
+  margin: 1rem auto;
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+}
+
+.converter-card h2 {
+  color: #0077cc;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e6eef9;
+}
+
+input[type='number'] {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+select {
+  min-width: 150px;
+  flex: 1;
+}
+
+/* Buttons */
+button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+/* Footers and notes */
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  background: #eef6ff;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .row { flex-direction: column; }
+  select { min-width: 100%; }
+  .converter-card { margin: 1rem; }
+}
