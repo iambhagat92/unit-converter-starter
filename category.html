@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Converters Category</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter Categories</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Converters</h1>
-    <nav class="top-nav">
-      <a href="index.html">⬅ Back to Home</a>
+    <h1>📂 Converter Categories</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="category.html">Categories</a>
     </nav>
   </header>
 
-  <main>
-    <section class="converter-list">
-      <a href="converter.html#length" class="card">Length Converter</a>
-      <a href="converter.html#weight" class="card">Weight Converter</a>
-      <a href="converter.html#temperature" class="card">Temperature Converter</a>
-      <a href="converter.html#speed" class="card">Speed Converter</a>
-      <a href="converter.html#currency" class="card">Currency Converter</a>
-    </section>
+  <main class="converter-container">
+    <h2>Select a Category</h2>
+    <div class="category-grid">
+      <a class="category-card" href="converter.html?type=length">📏 Length</a>
+      <a class="category-card" href="converter.html?type=weight">⚖️ Weight</a>
+      <a class="category-card" href="converter.html?type=temperature">🌡️ Temperature</a>
+      <a class="category-card" href="converter.html?type=speed">🚀 Speed</a>
+      <a class="category-card" href="converter.html?type=currency">💰 Currency</a>
+      <a class="category-card" href="converter.html?type=data">💾 Data</a>
+      <a class="category-card" href="converter.html?type=area">📐 Area</a>
+      <a class="category-card" href="converter.html?type=volume">🧊 Volume</a>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 All-in-One Converter</p>
+    <p>© 2025 All-in-One Converter. Built for learning 🚀</p>
   </footer>
 </body>
 </html>
