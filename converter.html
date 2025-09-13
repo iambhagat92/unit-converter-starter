@@ -1,128 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Converters</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Unit Converters</h1>
-    <nav class="top-nav">
-      <a href="index.html">⬅ Back to Home</a>
+    <h1>🔄 Unit Converter</h1>
+    <nav>
+      <a href="index.html">Home</a> |
       <a href="category.html">Categories</a>
     </nav>
   </header>
 
-  <main>
-    <!-- Length -->
-    <section id="length" class="converter-card">
-      <h2>Length Converter</h2>
-      <input type="number" id="length-input" placeholder="Enter value" />
-      <div class="row">
-        <select id="length-from">
-          <option value="m">Meters</option>
-          <option value="km">Kilometers</option>
-          <option value="cm">Centimeters</option>
-          <option value="mm">Millimeters</option>
-          <option value="mi">Miles</option>
-          <option value="ft">Feet</option>
-          <option value="in">Inches</option>
-        </select>
-        <select id="length-to">
-          <option value="m">Meters</option>
-          <option value="km">Kilometers</option>
-          <option value="cm">Centimeters</option>
-          <option value="mm">Millimeters</option>
-          <option value="mi">Miles</option>
-          <option value="ft">Feet</option>
-          <option value="in">Inches</option>
-        </select>
-      </div>
-      <button onclick="convertLength()">Convert</button>
-      <p>Result: <span id="length-result">0</span></p>
-    </section>
+  <main class="converter-container">
+    <h2 id="converter-title">Converter</h2>
 
-    <!-- Weight -->
-    <section id="weight" class="converter-card">
-      <h2>Weight / Mass Converter</h2>
-      <input type="number" id="weight-input" placeholder="Enter value" />
-      <div class="row">
-        <select id="weight-from">
-          <option value="kg">Kilograms</option>
-          <option value="g">Grams</option>
-          <option value="lb">Pounds</option>
-          <option value="oz">Ounces</option>
-        </select>
-        <select id="weight-to">
-          <option value="kg">Kilograms</option>
-          <option value="g">Grams</option>
-          <option value="lb">Pounds</option>
-          <option value="oz">Ounces</option>
-        </select>
-      </div>
-      <button onclick="convertWeight()">Convert</button>
-      <p>Result: <span id="weight-result">0</span></p>
-    </section>
-
-    <!-- Temperature -->
-    <section id="temperature" class="converter-card">
-      <h2>Temperature Converter</h2>
-      <input type="number" id="temp-input" placeholder="Enter value" />
-      <div class="row">
-        <select id="temp-from">
-          <option value="C">Celsius</option>
-          <option value="F">Fahrenheit</option>
-          <option value="K">Kelvin</option>
-        </select>
-        <select id="temp-to">
-          <option value="C">Celsius</option>
-          <option value="F">Fahrenheit</option>
-          <option value="K">Kelvin</option>
-        </select>
-      </div>
-      <button onclick="convertTemp()">Convert</button>
-      <p>Result: <span id="temp-result">0</span></p>
-    </section>
-
-    <!-- Speed -->
-    <section id="speed" class="converter-card">
-      <h2>Speed Converter</h2>
-      <input type="number" id="speed-input" placeholder="Enter value" />
-      <div class="row">
-        <select id="speed-from">
-          <option value="kmh">Km/h</option>
-          <option value="ms">m/s</option>
-          <option value="mph">mph</option>
-        </select>
-        <select id="speed-to">
-          <option value="kmh">Km/h</option>
-          <option value="ms">m/s</option>
-          <option value="mph">mph</option>
-        </select>
-      </div>
-      <button onclick="convertSpeed()">Convert</button>
-      <p>Result: <span id="speed-result">0</span></p>
-    </section>
-
-    <!-- Currency -->
-    <section id="currency" class="converter-card">
-      <h2>Currency Converter (Live rates)</h2>
-      <input type="number" id="currency-input" placeholder="Enter amount" />
-      <div class="row">
-        <select id="currency-from"></select>
-        <select id="currency-to"></select>
-      </div>
-      <button onclick="convertCurrency()">Convert</button>
-      <p>Result: <span id="currency-result">0</span></p>
-      <p class="note">Rates provided by exchangerate-api.com (free tier). If you see errors, API may be rate-limited.</p>
-    </section>
-
+    <div class="converter-box">
+      <input type="number" id="inputValue" placeholder="Enter value">
+      
+      <select id="fromUnit"></select>
+      <select id="toUnit"></select>
+      
+      <button onclick="convert()">Convert</button>
+      
+      <p id="result">Result: -</p>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 All-in-One Converter</p>
+    <p>© 2025 All-in-One Converter. Built for learning 🚀</p>
   </footer>
 
   <script src="js/converters.js"></script>
